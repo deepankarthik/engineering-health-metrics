@@ -1,0 +1,22 @@
+[
+  {
+    "iteration": "2026.1.1",
+    "committedStoryPoints": 50,
+    "deliveredStoryPoints": 23,
+    "capacity": 60,
+    "spillOverTotalStoryPoints": 27,
+    "spillOverTotalStories": 8,
+    "spillOverDependencyStoryPoints": 12,
+    "spillOverDependencyStories": 3
+  },
+  {
+    "iteration": "2026.1.2",
+    "committedStoryPoints": 50,
+    "deliveredStoryPoints": 45,
+    "capacity": 60,
+    "spillOverTotalStoryPoints": 5,
+    "spillOverTotalStories": 2,
+    "spillOverDependencyStoryPoints": 2,
+    "spillOverDependencyStories": 1
+  }
+]
