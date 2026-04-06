@@ -22,15 +22,15 @@ function createRenderer(width = DEFAULT_WIDTH, height = DEFAULT_HEIGHT) {
   return new ChartJSNodeCanvas({
     width,
     height,
-    backgroundColour: "#ffffff",
+    backgroundColour: CORP_COLORS.grey,
     chartCallback: registerChartPlugins,
   });
 }
 
 const fontFamily = "'Segoe UI', 'Helvetica Neue', Arial, sans-serif";
-const titleFontSize = 12;
-const tickFontSize = 11;
-const labelFontSize = 11;
+const titleFontSize = 28;
+const tickFontSize = 20;
+const labelFontSize = 20;
 
 const hiddenYAxis = {
   beginAtZero: true,
@@ -58,7 +58,7 @@ function baseChartOptions(title: string): ChartOptions {
   const upper = title.toUpperCase();
   return {
     responsive: false,
-    layout: { padding: { top: 18, right: 10, bottom: 6, left: 10 } },
+    layout: { padding: { top: 0, right: 0, bottom: 0, left: 0 } },
     plugins: {
       title: {
         display: true,
@@ -66,7 +66,7 @@ function baseChartOptions(title: string): ChartOptions {
         align: "center",
         color: CORP_COLORS.navy,
         font: { family: fontFamily, size: titleFontSize, weight: "bold" },
-        padding: { top: 4, bottom: 14 },
+        padding: { top: 4, bottom: 10 },
       },
       legend: {
         display: true,
@@ -75,9 +75,9 @@ function baseChartOptions(title: string): ChartOptions {
         labels: {
           color: CORP_COLORS.slate,
           font: { family: fontFamily, size: tickFontSize },
-          usePointStyle: true,
-          padding: 14,
-          boxWidth: 8,
+          usePointStyle: false,
+          padding: 6,
+          boxWidth: 2,
         },
       },
       datalabels: {

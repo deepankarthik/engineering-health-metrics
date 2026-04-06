@@ -37,7 +37,7 @@ const titlePlugin = (text: string) => ({
   text: text.toUpperCase(),
   align: "center" as const,
   color: CORP_COLORS.navy,
-  font: { family: fontFamily, size: 12, weight: "bold" },
+  font: { family: fontFamily, size: 14, weight: "bold" as const },
   padding: { top: 4, bottom: 12 } as const,
 });
 
@@ -46,10 +46,10 @@ const legendPlugin = {
   align: "center" as const,
   labels: {
     color: CORP_COLORS.slate,
-    usePointStyle: true,
+    usePointStyle: false,
     padding: 12,
-    font: { family: fontFamily, size: 11 },
-    boxWidth: 8,
+    font: { family: fontFamily, size: 12 },
+    boxWidth: 2,
   },
 };
 
@@ -73,7 +73,7 @@ function lineYMax(values: number[]): number {
 }
 
 const cardClass =
-  "rounded-sm border border-dashed border-slate-400 bg-white p-3 shadow-none";
+  "rounded-sm border border-dashed border-slate-400 bg-[#F1F5F9] p-3 shadow-none";
 
 type Props = {
   entries: IterationApiRow[];

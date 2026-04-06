@@ -1,4 +1,5 @@
 import PptxGenJS from "pptxgenjs";
+import { CORP_COLORS } from "./colors";
 
 export type DashboardChartBuffers = {
   deliveryPredictability: Buffer;
@@ -22,7 +23,7 @@ export async function buildReportPptx(charts: DashboardChartBuffers): Promise<Bu
   pptx.layout = "CUSTOM_16x9";
 
   const slide = pptx.addSlide();
-  slide.background = { color: "F1F5F9" };
+  slide.background = { color: CORP_COLORS.grey };
 
   slide.addText("Your Organization Name Here", {
     x: 0.4,
@@ -72,8 +73,8 @@ export async function buildReportPptx(charts: DashboardChartBuffers): Promise<Bu
       y,
       w: colW,
       h: rowH,
-      fill: { type: "solid", color: "FFFFFF" },
-      line: { color: "94A3B8", width: 1, dashType: "dash" },
+      fill: { type: "solid", color: CORP_COLORS.grey },
+      line: { color: "94A3B8", width: 0.5, dashType: "dash" },
     });
     const buf = charts[cell.key];
     slide.addImage({
